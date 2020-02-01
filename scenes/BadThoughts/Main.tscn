@@ -33,7 +33,7 @@ curve = SubResource( 1 )
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 position = Vector2( -1.43048, 1.03306 )
-rotation = 0.00420163
+rotation = 0.00420162
 
 [node name="Brain" parent="." instance=ExtResource( 3 )]
 

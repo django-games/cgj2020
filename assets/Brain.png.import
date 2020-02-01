@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/brain.png-271941cc429380311663f60bc6c1f0b7.stex"
+path="res://.import/Brain.png-a0613a9a84a90b48f7cd74017d769cb2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/brain.png"
-dest_files=[ "res://.import/brain.png-271941cc429380311663f60bc6c1f0b7.stex" ]
+source_file="res://assets/Brain.png"
+dest_files=[ "res://.import/Brain.png-a0613a9a84a90b48f7cd74017d769cb2.stex" ]
 
 [params]
 
