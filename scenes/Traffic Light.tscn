@@ -98,6 +98,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
+
 [node name="TrafficLight" type="Sprite" parent="TrafficLight2"]
 position = Vector2( 0, 147.134 )
 scale = Vector2( 4.27037, 4.27037 )
@@ -244,7 +245,6 @@ toggle_mode = true
 pressed = true
 enabled_focus_mode = 0
 flat = true
-
 [node name="TrafficLight4" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 825.063, 185.723 )
@@ -322,6 +322,7 @@ toggle_mode = true
 pressed = true
 enabled_focus_mode = 0
 flat = true
+
 [connection signal="toggled" from="TrafficLight1/Button" to="TrafficLight1/LightYellow" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight2/Button" to="TrafficLight2/LightYellow" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight3/Button" to="TrafficLight3/LightYellow" method="_on_Button_toggled"]
