@@ -55,7 +55,7 @@ script = ExtResource( 5 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight1"]
 visible = false
-scale = Vector2( 0.505, 0.505 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
@@ -85,14 +85,14 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="LightRed" type="Light2D" parent="TrafficLight2"]
-scale = Vector2( 0.504587, 0.504587 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 1, 0, 0, 1 )
 script = ExtResource( 5 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight2"]
 visible = false
-scale = Vector2( 0.505, 0.505 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
@@ -124,14 +124,14 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="LightRed" type="Light2D" parent="TrafficLight3"]
-scale = Vector2( 0.504587, 0.504587 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 1, 0, 0, 1 )
 script = ExtResource( 5 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight3"]
 visible = false
-scale = Vector2( 0.505, 0.505 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
@@ -161,14 +161,14 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="LightRed" type="Light2D" parent="TrafficLight4"]
-scale = Vector2( 0.504587, 0.504587 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 1, 0, 0, 1 )
 script = ExtResource( 5 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight4"]
 visible = false
-scale = Vector2( 0.505, 0.505 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
