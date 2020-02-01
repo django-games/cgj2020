@@ -153,11 +153,11 @@ scale = Vector2( 0.505, 0.505 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
-[connection signal="toggled" from="TrafficLight1/SpotRed/Button" to="TrafficLight1/LightGreen" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight1/SpotRed/Button" to="TrafficLight1/LightRed" method="_on_Button_toggled"]
-[connection signal="toggled" from="TrafficLight2/SpotRed/Button" to="TrafficLight2/LightRed" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight1/SpotRed/Button" to="TrafficLight1/LightGreen" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight2/SpotRed/Button" to="TrafficLight2/LightGreen" method="_on_Button_toggled"]
-[connection signal="toggled" from="TrafficLight3/SpotRed/Button" to="TrafficLight3/LightGreen" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight2/SpotRed/Button" to="TrafficLight2/LightRed" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight3/SpotRed/Button" to="TrafficLight3/LightRed" method="_on_Button_toggled"]
-[connection signal="toggled" from="TrafficLight4/SpotRed/Button" to="TrafficLight4/LightRed" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight3/SpotRed/Button" to="TrafficLight3/LightGreen" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight4/SpotRed/Button" to="TrafficLight4/LightGreen" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight4/SpotRed/Button" to="TrafficLight4/LightRed" method="_on_Button_toggled"]
