@@ -20,6 +20,7 @@ position = Vector2( 121.795, 307.433 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="SpotRed" type="Sprite" parent="TrafficLight1"]
+position = Vector2( -0.5, -0.5 )
 texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="TrafficLight1/SpotRed"]
@@ -40,14 +41,14 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="LightRed" type="Light2D" parent="TrafficLight1"]
-scale = Vector2( 0.504587, 0.504587 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 1, 0, 0, 1 )
 script = ExtResource( 5 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight1"]
 visible = false
-scale = Vector2( 0.505, 0.505 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
@@ -60,6 +61,7 @@ __meta__ = {
 }
 
 [node name="SpotRed" type="Sprite" parent="TrafficLight2"]
+position = Vector2( -0.5, -0.5 )
 texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="TrafficLight2/SpotRed"]
@@ -74,14 +76,14 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="LightRed" type="Light2D" parent="TrafficLight2"]
-scale = Vector2( 0.504587, 0.504587 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 1, 0, 0, 1 )
 script = ExtResource( 5 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight2"]
 visible = false
-scale = Vector2( 0.505, 0.505 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
@@ -94,6 +96,7 @@ __meta__ = {
 }
 
 [node name="SpotRed" type="Sprite" parent="TrafficLight3"]
+position = Vector2( -0.5, -0.5 )
 texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="TrafficLight3/SpotRed"]
@@ -108,14 +111,14 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="LightRed" type="Light2D" parent="TrafficLight3"]
-scale = Vector2( 0.504587, 0.504587 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 1, 0, 0, 1 )
 script = ExtResource( 5 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight3"]
 visible = false
-scale = Vector2( 0.505, 0.505 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
@@ -128,6 +131,7 @@ __meta__ = {
 }
 
 [node name="SpotRed" type="Sprite" parent="TrafficLight4"]
+position = Vector2( -0.5, -0.5 )
 texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="TrafficLight4/SpotRed"]
@@ -142,14 +146,14 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="LightRed" type="Light2D" parent="TrafficLight4"]
-scale = Vector2( 0.504587, 0.504587 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 1, 0, 0, 1 )
 script = ExtResource( 5 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight4"]
 visible = false
-scale = Vector2( 0.505, 0.505 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
@@ -159,5 +163,5 @@ script = ExtResource( 6 )
 [connection signal="toggled" from="TrafficLight2/SpotRed/Button" to="TrafficLight2/LightRed" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight3/SpotRed/Button" to="TrafficLight3/LightRed" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight3/SpotRed/Button" to="TrafficLight3/LightGreen" method="_on_Button_toggled"]
-[connection signal="toggled" from="TrafficLight4/SpotRed/Button" to="TrafficLight4/LightGreen" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight4/SpotRed/Button" to="TrafficLight4/LightRed" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight4/SpotRed/Button" to="TrafficLight4/LightGreen" method="_on_Button_toggled"]
