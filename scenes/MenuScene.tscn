@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/MenuScene.gd" type="Script" id=1]
 [ext_resource path="res://assets/title.png" type="Texture" id=2]
@@ -10,10 +10,6 @@ size = 32
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 32
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=3]
 size = 24
 font_data = ExtResource( 3 )
 
@@ -52,29 +48,33 @@ margin_bottom = 407.0
 size_flags_vertical = 3
 custom_constants/separation = 20
 
-[node name="Start2" type="Label" parent="HBoxContainer/Left/Menu"]
+[node name="Start" type="RichTextLabel" parent="HBoxContainer/Left/Menu"]
 margin_right = 350.0
-margin_bottom = 39.0
-custom_fonts/font = SubResource( 1 )
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[url]START[/url]"
+meta_underlined = false
 text = "START"
 
 [node name="Credits" type="RichTextLabel" parent="HBoxContainer/Left/Menu"]
-margin_top = 59.0
+margin_top = 70.0
 margin_right = 350.0
-margin_bottom = 109.0
+margin_bottom = 120.0
 rect_min_size = Vector2( 0, 50 )
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "[url]CREDITS[/url]"
 meta_underlined = false
 text = "CREDITS"
 
 [node name="Quit" type="RichTextLabel" parent="HBoxContainer/Left/Menu"]
-margin_top = 129.0
+margin_top = 140.0
 margin_right = 350.0
-margin_bottom = 179.0
+margin_bottom = 190.0
 rect_min_size = Vector2( 0, 50 )
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "[url]QUIT[/url]"
 meta_underlined = false
@@ -84,7 +84,7 @@ text = "QUIT"
 margin_top = 411.0
 margin_right = 350.0
 margin_bottom = 440.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "A DJANGO GAMES PRODUCTION"
 
 [node name="Right" type="CenterContainer" parent="HBoxContainer"]
@@ -98,5 +98,6 @@ margin_top = 20.0
 margin_right = 400.0
 margin_bottom = 420.0
 texture = ExtResource( 4 )
+[connection signal="meta_clicked" from="HBoxContainer/Left/Menu/Start" to="." method="go_to_intro"]
 [connection signal="meta_clicked" from="HBoxContainer/Left/Menu/Credits" to="." method="go_to_credits"]
 [connection signal="meta_clicked" from="HBoxContainer/Left/Menu/Quit" to="." method="quit"]
