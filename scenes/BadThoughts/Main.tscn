@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/BadThoughts/Main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/BadThoughts/Mob.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/BadThoughts/Brain.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1.43048, 1.03306, 0, 0, 0, 0, 1026, 5.35001 )
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 4 )
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+Mob = ExtResource( 2 )
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 240, 450 )
+
+[node name="MobPath" type="Path2D" parent="."]
+editor/display_folded = true
+curve = SubResource( 1 )
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2( -1.43048, 1.03306 )
+rotation = 0.00420163
+
+[node name="Brain" parent="." instance=ExtResource( 3 )]
+
+[node name="TimerLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -22.5
+margin_right = 22.5
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+[connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="hit" from="Brain" to="." method="game_over"]
