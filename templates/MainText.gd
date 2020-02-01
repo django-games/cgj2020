@@ -17,6 +17,7 @@ func _ready():
 
 func _process(delta):
 	if get_parent().get_parent().IS_ACTIVE:
+		self.visible = true
 		SECONDS_COUNTER += delta
 		if SECONDS_COUNTER >= SECONDS_TO_WAIT:
 			if self.visible_characters <= TEXT_SIZE:
@@ -27,3 +28,5 @@ func _process(delta):
 			else:
 				get_parent().get_parent().IS_READY = true
 			SECONDS_COUNTER = 0
+	else:
+		self.visible = false

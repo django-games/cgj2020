@@ -23,7 +23,6 @@ __meta__ = {
 }
 SECONDS_TO_WAIT = 0.5
 IS_ACTIVE = true
-TEXT = "Esta es una prueba."
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 486.304, 301.71 )
@@ -41,4 +40,5 @@ margin_top = 200.0
 margin_right = 392.0
 margin_bottom = 239.0
 custom_fonts/font = SubResource( 1 )
+align = 1
 script = ExtResource( 1 )

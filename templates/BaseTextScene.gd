@@ -10,4 +10,4 @@ export(bool) var IS_ACTIVE = false
 export(bool) var IS_READY = false
 
 # The text
-export(String) var TEXT = ""
+export(String, MULTILINE) var TEXT = ""
