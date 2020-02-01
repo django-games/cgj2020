@@ -1,22 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/spot.png" type="Texture" id=1]
-[ext_resource path="res://assets/light.png" type="Texture" id=2]
-[ext_resource path="res://scenes/LightRed.gd" type="Script" id=3]
-[ext_resource path="res://scenes/LightGreen.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Traffic Light.gd" type="Script" id=1]
+[ext_resource path="res://assets/bg_gray.png" type="Texture" id=2]
+[ext_resource path="res://assets/spot.png" type="Texture" id=3]
+[ext_resource path="res://assets/light.png" type="Texture" id=4]
+[ext_resource path="res://scripts/TrafficLight/LightRed.gd" type="Script" id=5]
+[ext_resource path="res://scripts/TrafficLight/LightGreen.gd" type="Script" id=6]
 
-[node name="Traffic Light" type="Node"]
+[node name="TrafficLight" type="Node"]
+script = ExtResource( 1 )
 
-[node name="TrafficLightRed" type="Node2D" parent="."]
-position = Vector2( 381.101, 380.442 )
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 487.431, 292.489 )
+scale = Vector2( 8.61611, 5.37695 )
+texture = ExtResource( 2 )
+
+[node name="TrafficLight1" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 121.795, 307.433 )
+scale = Vector2( 0.5, 0.5 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="SpotRed" type="Sprite" parent="TrafficLightRed"]
-texture = ExtResource( 1 )
+[node name="SpotRed" type="Sprite" parent="TrafficLight1"]
+texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TrafficLightRed/SpotRed"]
+[node name="Button" type="Button" parent="TrafficLight1/SpotRed"]
 show_behind_parent = true
 margin_left = -26.8515
 margin_top = -21.6958
@@ -26,17 +36,123 @@ toggle_mode = true
 pressed = true
 flat = true
 
-[node name="LightRed" type="Light2D" parent="TrafficLightRed"]
+[node name="LightRed" type="Light2D" parent="TrafficLight1"]
 scale = Vector2( 0.504587, 0.504587 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 color = Color( 1, 0, 0, 1 )
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 
-[node name="LightGreen" type="Light2D" parent="TrafficLightRed"]
+[node name="LightGreen" type="Light2D" parent="TrafficLight1"]
 visible = false
 scale = Vector2( 0.505, 0.505 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 color = Color( 0.101961, 1, 0, 1 )
-script = ExtResource( 4 )
-[connection signal="toggled" from="TrafficLightRed/SpotRed/Button" to="TrafficLightRed/LightGreen" method="_on_Button_toggled"]
-[connection signal="toggled" from="TrafficLightRed/SpotRed/Button" to="TrafficLightRed/LightRed" method="_on_Button_toggled"]
+script = ExtResource( 6 )
+
+[node name="TrafficLight2" type="Node2D" parent="."]
+position = Vector2( 350.821, 304.93 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpotRed" type="Sprite" parent="TrafficLight2"]
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TrafficLight2/SpotRed"]
+show_behind_parent = true
+margin_left = -26.8515
+margin_top = -21.6958
+margin_right = 17.1485
+margin_bottom = 26.3042
+toggle_mode = true
+pressed = true
+flat = true
+
+[node name="LightRed" type="Light2D" parent="TrafficLight2"]
+scale = Vector2( 0.504587, 0.504587 )
+texture = ExtResource( 4 )
+color = Color( 1, 0, 0, 1 )
+script = ExtResource( 5 )
+
+[node name="LightGreen" type="Light2D" parent="TrafficLight2"]
+visible = false
+scale = Vector2( 0.505, 0.505 )
+texture = ExtResource( 4 )
+color = Color( 0.101961, 1, 0, 1 )
+script = ExtResource( 6 )
+
+[node name="TrafficLight3" type="Node2D" parent="."]
+position = Vector2( 617.547, 311.583 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpotRed" type="Sprite" parent="TrafficLight3"]
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TrafficLight3/SpotRed"]
+show_behind_parent = true
+margin_left = -26.8515
+margin_top = -21.6958
+margin_right = 17.1485
+margin_bottom = 26.3042
+toggle_mode = true
+pressed = true
+flat = true
+
+[node name="LightRed" type="Light2D" parent="TrafficLight3"]
+scale = Vector2( 0.504587, 0.504587 )
+texture = ExtResource( 4 )
+color = Color( 1, 0, 0, 1 )
+script = ExtResource( 5 )
+
+[node name="LightGreen" type="Light2D" parent="TrafficLight3"]
+visible = false
+scale = Vector2( 0.505, 0.505 )
+texture = ExtResource( 4 )
+color = Color( 0.101961, 1, 0, 1 )
+script = ExtResource( 6 )
+
+[node name="TrafficLight4" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 864.468, 314.986 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpotRed" type="Sprite" parent="TrafficLight4"]
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TrafficLight4/SpotRed"]
+show_behind_parent = true
+margin_left = -26.8515
+margin_top = -21.6958
+margin_right = 17.1485
+margin_bottom = 26.3042
+toggle_mode = true
+pressed = true
+flat = true
+
+[node name="LightRed" type="Light2D" parent="TrafficLight4"]
+scale = Vector2( 0.504587, 0.504587 )
+texture = ExtResource( 4 )
+color = Color( 1, 0, 0, 1 )
+script = ExtResource( 5 )
+
+[node name="LightGreen" type="Light2D" parent="TrafficLight4"]
+visible = false
+scale = Vector2( 0.505, 0.505 )
+texture = ExtResource( 4 )
+color = Color( 0.101961, 1, 0, 1 )
+script = ExtResource( 6 )
+[connection signal="toggled" from="TrafficLight1/SpotRed/Button" to="TrafficLight1/LightRed" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight1/SpotRed/Button" to="TrafficLight1/LightGreen" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight2/SpotRed/Button" to="TrafficLight2/LightRed" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight2/SpotRed/Button" to="TrafficLight2/LightGreen" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight3/SpotRed/Button" to="TrafficLight3/LightRed" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight3/SpotRed/Button" to="TrafficLight3/LightGreen" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight4/SpotRed/Button" to="TrafficLight4/LightGreen" method="_on_Button_toggled"]
+[connection signal="toggled" from="TrafficLight4/SpotRed/Button" to="TrafficLight4/LightRed" method="_on_Button_toggled"]

@@ -1,4 +1,4 @@
-extends Light2D
+extends Node
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -11,10 +11,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Button_toggled(toggled):
-	if toggled:
-		show()
-	else:
-		hide()
