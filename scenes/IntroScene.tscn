@@ -11,6 +11,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TExt0" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.25
+TEXT = "I am the FIXER"
+
 [node name="Text1" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
