@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/BridgeToTFScene.gd" type="Script" id=1]
+[ext_resource path="res://templates/BaseTextScene.tscn" type="PackedScene" id=2]
+
+[node name="BridgeToTFScene" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text1" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.15
+TEXT = "Phew,
+I made it out of
+that bridge."
+
+[node name="MainContainer" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.15
+TEXT = "I can't believe so many
+holes could appear
+on a public road!"
+
+[node name="MainContainer2" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.15
+TEXT = "Maybe I should
+repair the government,
+so they start doing
+what they have to do"
+
+[node name="MainContainer3" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.15
+TEXT = "Oh no, not again!
+
+All the traffic lights
+are on red,
+and I REALLY need to see
+my love!"
+
+[node name="MainContainer4" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.18
+TEXT = "Maybe if I
+focus on the
+green lights,
+I can REPAIR
+this mess!"
