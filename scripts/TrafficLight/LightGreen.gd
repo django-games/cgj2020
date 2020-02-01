@@ -11,7 +11,7 @@ func _ready():
 func _process(delta):
 	if turnedOn:
 		elapsed += delta
-		if elapsed >= 1.5 and get_node("/root/TrafficLight").total_green < 4:
+		if elapsed >= 1.8 and get_node("/root/TrafficLight").total_green < 4:
 			turnedOn = false
 			elapsed = 0
 			hide()
