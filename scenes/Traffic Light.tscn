@@ -16,7 +16,6 @@ scale = Vector2( 8.61611, 5.37695 )
 texture = ExtResource( 2 )
 
 [node name="TrafficLight1" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 121.795, 307.433 )
 scale = Vector2( 0.5, 0.5 )
 __meta__ = {
@@ -32,6 +31,7 @@ margin_left = -26.8515
 margin_top = -21.6958
 margin_right = 17.1485
 margin_bottom = 26.3042
+rect_scale = Vector2( 1.2, 1.2 )
 toggle_mode = true
 pressed = true
 flat = true
@@ -65,6 +65,7 @@ margin_left = -26.8515
 margin_top = -21.6958
 margin_right = 17.1485
 margin_bottom = 26.3042
+rect_scale = Vector2( 1.2, 1.2 )
 toggle_mode = true
 pressed = true
 flat = true
@@ -98,6 +99,7 @@ margin_left = -26.8515
 margin_top = -21.6958
 margin_right = 17.1485
 margin_bottom = 26.3042
+rect_scale = Vector2( 1.2, 1.2 )
 toggle_mode = true
 pressed = true
 flat = true
@@ -116,7 +118,6 @@ color = Color( 0.101961, 1, 0, 1 )
 script = ExtResource( 6 )
 
 [node name="TrafficLight4" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 864.468, 314.986 )
 scale = Vector2( 0.5, 0.5 )
 __meta__ = {
@@ -132,6 +133,7 @@ margin_left = -26.8515
 margin_top = -21.6958
 margin_right = 17.1485
 margin_bottom = 26.3042
+rect_scale = Vector2( 1.2, 1.2 )
 toggle_mode = true
 pressed = true
 flat = true
