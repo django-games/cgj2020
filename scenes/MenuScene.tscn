@@ -71,9 +71,15 @@ margin_right = 350.0
 margin_bottom = 168.0
 rect_min_size = Vector2( 0, 50 )
 custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[url]QUIT[/url]"
+meta_underlined = false
 text = "QUIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="AUTHORS2" type="Label" parent="HBoxContainer/Left"]
+[node name="Authors" type="Label" parent="HBoxContainer/Left"]
 margin_top = 411.0
 margin_right = 350.0
 margin_bottom = 440.0
