@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/CarRace.gd" type="Script" id=1]
 [ext_resource path="res://assets/grass.png" type="Texture" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/bg_gray.png" type="Texture" id=6]
 [ext_resource path="res://scripts/Hueco.gd" type="Script" id=7]
 [ext_resource path="res://scripts/Car.gd" type="Script" id=8]
-[ext_resource path="res://assets/Blue.png" type="Texture" id=9]
+[ext_resource path="res://assets/Carro.png" type="Texture" id=9]
 [ext_resource path="res://scripts/Camera2D.gd" type="Script" id=10]
 
 [sub_resource type="TileSet" id=1]
@@ -107,10 +107,13 @@
 radius = 26.7232
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 32, 27.9813 )
+extents = Vector2( 42.6763, 19.3822 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 1447.5, 47.2032 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 50, 305 )
 
 [node name="CarRace" type="Node2D"]
 script = ExtResource( 1 )
@@ -439,6 +442,22 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hueco20/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Hueco33" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 130.142, 127.781 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Hueco33"]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hueco33/Area2D"]
 shape = SubResource( 2 )
 
 [node name="Hueco21" type="Node2D" parent="."]
@@ -770,6 +789,8 @@ SPEED_X = 150
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+rotation = 4.71239
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 9 )
 
 [node name="Pared" type="Node2D" parent="."]
@@ -805,10 +826,11 @@ SPEED_CAM = 150
 
 [node name="Label" type="Label" parent="Camera2D"]
 visible = false
-margin_left = -430.0
-margin_top = -252.0
-margin_right = 417.0
-margin_bottom = -108.0
+margin_left = -512.0
+margin_top = -204.0
+margin_right = 509.0
+margin_bottom = -60.0
+size_flags_vertical = 1
 text = "Habeis Chocao Loco"
 align = 1
 valign = 1
@@ -817,10 +839,21 @@ valign = 1
 pause_mode = 2
 visible = false
 margin_left = -248.818
-margin_top = -29.9789
+margin_top = -30.8363
 margin_right = 171.182
-margin_bottom = 30.0211
+margin_bottom = 29.1637
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Presiona aqui para volver a empezar"
+
+[node name="Final" type="Area2D" parent="."]
+position = Vector2( 3101.27, 302.024 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final"]
+shape = SubResource( 5 )
 [connection signal="body_entered" from="Hueco/Area2D" to="Hueco/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco2/Area2D" to="Hueco2/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco3/Area2D" to="Hueco3/Area2D" method="_on_Area2D_body_entered"]
@@ -841,6 +874,7 @@ text = "Presiona aqui para volver a empezar"
 [connection signal="body_entered" from="Hueco18/Area2D" to="Hueco18/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco19/Area2D" to="Hueco19/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco20/Area2D" to="Hueco20/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Hueco33/Area2D" to="Hueco33/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco21/Area2D" to="Hueco21/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco22/Area2D" to="Hueco22/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco23/Area2D" to="Hueco23/Area2D" method="_on_Area2D_body_entered"]
@@ -865,3 +899,4 @@ text = "Presiona aqui para volver a empezar"
 [connection signal="body_entered" from="Pared2/Area2D" to="Pared2/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Camera2D/Button" to="." method="_on_Button_pressed"]
+[connection signal="body_entered" from="Final" to="." method="_on_Final_body_entered"]

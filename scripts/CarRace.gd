@@ -22,3 +22,10 @@ func _on_Button_pressed():
 	get_node("Camera2D/Label").hide()
 	
 	get_tree().reload_current_scene()
+
+
+func _on_Final_body_entered(body):
+	print("Ganaste")
+	var label = get_node("Camera2D/Label")
+	label.text = "Ganaste loco"
+	label.show()
