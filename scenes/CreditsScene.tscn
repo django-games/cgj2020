@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://templates/BaseTextScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/CreditsScene.gd" type="Script" id=2]
+
+[node name="CreditsScene" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "Here goes the title"
+
+[node name="DjangoGames" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+IS_ACTIVE = false
+TEXT = "A
+Django Games
+production"
+
+[node name="GameDesign" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+IS_ACTIVE = false
+TEXT = "Game Design
+Andrés Ignacio Torres"
+
+[node name="Programming" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+IS_ACTIVE = false
+TEXT = "Lead Programmer
+Gustavo Castellanos"
+
+[node name="Art" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+IS_ACTIVE = false
+TEXT = "Lead Visual Artist
+Valerie Blanco"
+
+[node name="Music" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+IS_ACTIVE = false
+TEXT = "Lead Musician
+David Rodríguez"
+
+[node name="GameJam" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+IS_ACTIVE = false
+TEXT = "Made with <3
+at the
+Caracas Game Jam
+2020"
+
+[node name="Thanks" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+IS_ACTIVE = false
+TEXT = "Thanks for playing!"
