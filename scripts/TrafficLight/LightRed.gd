@@ -11,7 +11,7 @@ func _ready():
 func _process(delta):
 	if not turnedOn:
 		elapsed += delta
-		if elapsed >= 1.8 and get_node("/root/TrafficLight").total_green < 4:
+		if elapsed >= 1.5 and get_node("/root/TrafficLight").total_green < 4:
 			get_node("/root/TrafficLight").total_green -= 1
 			get_node("../SpotRed/Button").set_pressed(true)
 			turnedOn = true
@@ -24,9 +24,11 @@ func _on_Button_toggled(toggled):
 		if get_node("/root/TrafficLight").total_green < 4:
 			get_node("/root/TrafficLight").total_green -= 1
 			show()
+			elapsed = 0
 	else:
 		get_node("/root/TrafficLight").total_green += 1
 		if	get_node("/root/TrafficLight").total_green == 4:
 			print("Siguiente escena")
 		turnedOn = false		
 		hide()
+		elapsed = 0
