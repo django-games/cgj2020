@@ -19,6 +19,10 @@ config/name="CGJ2020"
 run/main_scene="res://scenes/MenuScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global_script="*res://scripts/global.gd"
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
