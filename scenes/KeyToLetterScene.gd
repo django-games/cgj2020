@@ -26,4 +26,4 @@ func _process(_delta):
 				texts[current_node].IS_ACTIVE = true
 
 func after_last_text():
-	print("NEXT SCENE")
+	return get_tree().change_scene("res://scenes/Envelope/Main.tscn")
