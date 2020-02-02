@@ -33,7 +33,6 @@ __meta__ = {
 }
 
 [node name="Paso2" type="Node2D" parent="."]
-visible = false
 
 [node name="CartaAtras" type="Sprite" parent="Paso2"]
 position = Vector2( 487.899, 411.366 )
