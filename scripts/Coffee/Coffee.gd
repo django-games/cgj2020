@@ -48,14 +48,14 @@ func _on_Andres_input_event(_viewport, event, _shape_idx):
 
 func _on_David_area_entered(area):
 	if area.get_name() == "Cafe":
-		$Dave/Texto/Label.text = "Hey, thanks, it's nice!'"
+		$Dave/Texto/Label.text = "IF I WANTED BURNT COFFEE I WOULD HAVE DONE IT MYSELF"
 		amount_ready += 1
 		$Cafe.hide()
 		print("David con cafe")
 
 func _on_Valerie_area_entered(area):
 	if area.get_name() == "Pizza":
-		$Val/Texto/Label.text = "OOOH PIZZA THANK YOU"
+		$Val/Texto/Label.text = "IT'S TOO HOT, UGH"
 		amount_ready += 1
 		$Pizza.hide()
 		print("Valerie con pizza")
@@ -63,7 +63,7 @@ func _on_Valerie_area_entered(area):
 
 func _on_Andres_area_entered(area):
 	if area.get_name() == "Radio":
-		$Andy/Texto/Label.text = "YAS, THAT'S MY JAM! TY <3"
+		$Andy/Texto/Label.text = "ONLY EIGHT SECONDS? DO YOU REALLY RESPECT COPYRIGHT LAWS??"
 		amount_ready += 1
 		$Radio.hide()
 		print("Andrés con radio")
@@ -74,7 +74,7 @@ func _on_Andres_area_entered(area):
 
 func _on_Gustavo_area_entered(area):
 	if area.get_name() == "Libro":
-		$Gus/Texto/Label.text = "YOU ROCK, THANKS!"
+		$Gus/Texto/Label.text = "HMPH, THIS IS NOT THE EDITION I WANTED---"
 		amount_ready += 1
 		$Libro.hide()
 		print("Gus con libro")
