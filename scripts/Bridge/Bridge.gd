@@ -6,6 +6,7 @@ var SPEED = 150
 
 func _ready():
 	car = $Sprite
+	global_script.play_music("drumsss.ogg")
 	
 func _process(delta):
 	if is_bridge_complete == 7:

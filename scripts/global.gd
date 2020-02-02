@@ -2,6 +2,13 @@ extends Node
 
 func _ready():
 	set_process_input(true)
+	
+func play_music(name):
+	var music = MusicPlayer
+	var audio_file = "res://Music/" + str(name)
+	var sfx = load(audio_file)
+	music.stream = sfx
+	music.play()
 
 func _input(_ev):
 	if Input.is_key_pressed(KEY_Q):

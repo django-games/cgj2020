@@ -6,6 +6,7 @@ const BUG = preload("res://scenes/BugFixer/Bug.tscn")
 var remaining_time : int
 
 func _ready():
+	global_script.play_music("drumsss.ogg")
 	remaining_time = 20
 	update_timer_label(remaining_time)
 	$BugTimer.start()

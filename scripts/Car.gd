@@ -15,9 +15,7 @@ func _physics_process(delta):
 	var move = mouse_pos.y - position.y
 	var direction = mouse_pos - position
 	mouse_pos = get_global_mouse_position()
-	
-	if position.x <= 3100:
-		position.x += SPEED_X * delta
+	position.x += SPEED_X * delta
 
 	if move != 0:
 		rotation = direction.angle()

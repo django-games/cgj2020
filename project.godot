@@ -23,6 +23,7 @@ config/description="The FIXER can repair anything he wants... but his life! Help
 [autoload]
 
 global_script="*res://scripts/global.gd"
+MusicPlayer="*res://templates/MusicPlayer.tscn"
 
 [input]
 

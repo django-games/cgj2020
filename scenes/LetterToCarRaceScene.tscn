@@ -97,7 +97,7 @@ margin_bottom = 600.0
 SECONDS_TO_WAIT = 0.2
 TEXT = "I am driving
 so far away
-to forget!"
+to forget..."
 
 [node name="MainContainer10" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
@@ -107,7 +107,8 @@ margin_bottom = 600.0
 SECONDS_TO_WAIT = 0.2
 TEXT = "But wait...
 
-The road is full of holes!
+The road is full of holes...
+Just like my life...
 
 And I...
 I can't repair them..."
@@ -118,6 +119,7 @@ anchor_bottom = 0.0
 margin_right = 1024.0
 margin_bottom = 600.0
 SECONDS_TO_WAIT = 0.2
-TEXT = "My powers are not working!
+TEXT = "My powers...
+are gone...
 
 Watch out for the road!"

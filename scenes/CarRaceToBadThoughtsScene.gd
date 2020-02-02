@@ -5,6 +5,7 @@ var current_node = -1
 var is_last_node = false
 
 func _ready():
+
 	for text in get_children():
 		texts.append(text)
 	if texts.size() > 0:
