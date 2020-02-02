@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/MenuScene.gd" type="Script" id=1]
 [ext_resource path="res://assets/title.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/FuturaRenner-Light.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/logo.png" type="Texture" id=4]
+[ext_resource path="res://assets/Llave.png" type="Texture" id=5]
+[ext_resource path="res://scripts/KeyMenu.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -89,15 +91,28 @@ text = "A DJANGO GAMES PRODUCTION"
 
 [node name="Right" type="CenterContainer" parent="HBoxContainer"]
 margin_left = 354.0
-margin_right = 754.0
+margin_right = 354.0
 margin_bottom = 440.0
 size_flags_vertical = 3
 
 [node name="Logo" type="TextureRect" parent="HBoxContainer/Right"]
+visible = false
+margin_left = -200.0
 margin_top = 20.0
-margin_right = 400.0
+margin_right = 200.0
 margin_bottom = 420.0
 texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="HBoxContainer/Right"]
+position = Vector2( 302, 236 )
+rotation = 0.785398
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="HBoxContainer/Right"]
+autostart = true
 [connection signal="meta_clicked" from="HBoxContainer/Left/Menu/Start" to="." method="go_to_intro"]
 [connection signal="meta_clicked" from="HBoxContainer/Left/Menu/Credits" to="." method="go_to_credits"]
 [connection signal="meta_clicked" from="HBoxContainer/Left/Menu/Quit" to="." method="quit"]
+[connection signal="timeout" from="HBoxContainer/Right/Timer" to="HBoxContainer/Right/Sprite" method="_on_Timer_timeout"]
