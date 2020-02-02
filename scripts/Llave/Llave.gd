@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var direction
-var SPEED = 4
+var SPEED = 3
 
 func _init():
 	pass
