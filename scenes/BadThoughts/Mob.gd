@@ -6,7 +6,7 @@ export var max_speed = 650
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite.animation = "left"
+	$AnimatedSprite.animation = "right 1"
 	
 func set_glow_color(color):
 	$Light2D.set_color(color)
