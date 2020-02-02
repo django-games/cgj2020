@@ -30,7 +30,7 @@ func update_timer_label(new_label):
 func finish_game():
 	$BugTimer.stop()
 	$MatchTimer.stop()
-	print("Next scene")
+	get_tree().change_scene("res://scenes/BugFixerToHeartScene.tscn")
 
 func bug_spawn():
 	$MobPath/MobSpawnLocation.set_offset(randi())
