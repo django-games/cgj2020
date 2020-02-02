@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bad_thought.png-ef91b0377bcd5a9726c74e71203f3aec.stex"
+path="res://.import/los_toma_cafe.jpg-b2f307dad44974dcbff4d340030586cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bad_thought.png"
-dest_files=[ "res://.import/Bad_thought.png-ef91b0377bcd5a9726c74e71203f3aec.stex" ]
+source_file="res://assets/los_toma_cafe.jpg"
+dest_files=[ "res://.import/los_toma_cafe.jpg-b2f307dad44974dcbff4d340030586cc.stex" ]
 
 [params]
 
