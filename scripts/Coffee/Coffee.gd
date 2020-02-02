@@ -45,6 +45,22 @@ func _on_Andres_input_event(_viewport, event, _shape_idx):
 
 func _on_David_area_entered(area):
 	if area.get_name() == "Cafe":
+		$Dave/Texto/Label.text = "Hey, thanks, it's nice!'"
 		amount_ready += 1
 		$Cafe.hide()
 		print("David con cafe")
+
+func _on_Valerie_area_entered(area):
+	if area.get_name() == "Pizza":
+		$Val/Texto/Label.text = "OOOH PIZZA THANK YOU"
+		amount_ready += 1
+		$Pizza.hide()
+		print("Valerie con pizza")
+
+
+func _on_Andres_area_entered(area):
+	if area.get_name() == "Radio":
+		$Andy/Texto/Label.text = "YAS, THAT'S MY JAM! TY <3'"
+		amount_ready += 1
+		$Radio.hide()
+		print("Andrés con radio")
