@@ -9,3 +9,9 @@ func screen_exited():
 func has_been_Shot(_body):
 	_body.queue_free()
 	queue_free()
+
+func _physics_process(_delta):
+	if self.position.x < 0:
+		self.linear_velocity.x *= -1
+	if self.position.x < 0:
+		self.linear_velocity.y *= -1

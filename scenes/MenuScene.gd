@@ -1,5 +1,8 @@
 extends MarginContainer
 
+func _ready():
+	global_script.play_music("music2.ogg")
+
 func quit(_button):
 	print("Exiting...")
 	return get_tree().quit()

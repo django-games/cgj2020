@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Music/music2.ogg" type="AudioStream" id=1]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+pause_mode = 2
+stream = ExtResource( 1 )
+autoplay = true

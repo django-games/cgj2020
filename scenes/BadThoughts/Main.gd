@@ -7,6 +7,7 @@ var time_left = 20
 var colors = [Color( 0.18, 0.31, 0.31, 1 ), Color( 0.28, 0.24, 0.55, 1 )]
 
 func _ready():
+	global_script.play_music("music2.ogg")
 	randomize()
 	new_game()
 

@@ -1,6 +1,7 @@
 extends Node2D
 
-
+func _ready():
+	global_script.play_music("drumsss.ogg")
 
 func _on_Area2D_body_entered(_body):
 	$Timer.stop()
