@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scripts/Coffee/Coffee.gd" type="Script" id=1]
 [ext_resource path="res://assets/Agua.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/Pizza.png" type="Texture" id=8]
 [ext_resource path="res://assets/Radio.png" type="Texture" id=9]
 [ext_resource path="res://assets/Libro.png" type="Texture" id=10]
+[ext_resource path="res://Music/tusa-8b.ogg" type="AudioStream" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Agua.png 0"
@@ -93,7 +94,7 @@ margin_right = 290.0
 margin_bottom = 104.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Traeme PIZZA!!!"
+text = "Bring me PIZZAAA!!!"
 align = 1
 valign = 1
 autowrap = true
@@ -128,7 +129,7 @@ margin_right = 290.0
 margin_bottom = 104.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Necesito leer la primera edicion de Dragon ball "
+text = "I need to read Dragon Ball's first manga book, quick!"
 align = 1
 valign = 1
 autowrap = true
@@ -164,7 +165,7 @@ margin_right = 359.0
 margin_bottom = 104.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Quiero un cafe, doble de azucar, con crema, en taza de porcelana de dinastia china, a temperatura de 79 grados, ni mas ni menos"
+text = "I want a coffee, dark but not too dark, with sugar but not too sweet, in a chinese cup, with cream and at 79 degrees."
 align = 1
 valign = 1
 autowrap = true
@@ -199,7 +200,7 @@ margin_right = 290.0
 margin_bottom = 104.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "PONGAN TUSAAAA"
+text = "I'm sad... PLAY MY FAVORITE SONG, STREAM TUSA!"
 align = 1
 valign = 1
 autowrap = true
@@ -247,6 +248,9 @@ texture = ExtResource( 10 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Libro"]
 position = Vector2( -0.567199, 0.819453 )
 shape = SubResource( 9 )
+
+[node name="Tusa" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
 [connection signal="area_entered" from="Val/Valerie" to="." method="_on_Valerie_area_entered"]
 [connection signal="input_event" from="Val/Valerie" to="." method="_on_Valerie_input_event"]
 [connection signal="area_entered" from="Gus/Gustavo" to="." method="_on_Gustavo_area_entered"]
