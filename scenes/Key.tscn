@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/Llave/Key.gd" type="Script" id=1]
+[ext_resource path="res://assets/Bloque2.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Llave/Llave.gd" type="Script" id=3]
+[ext_resource path="res://assets/Llave.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Llave/Mani.gd" type="Script" id=5]
+[ext_resource path="res://assets/Mano.png" type="Texture" id=6]
+[ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Bloque2.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 80, 40 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 90.0
+height = 150.0
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 12.1285, 676.581 )
+
+[node name="Key" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
+
+[node name="Llave" type="Node2D" parent="."]
+position = Vector2( 736.051, 429.336 )
+rotation = 1.5708
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Llave"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Llave/KinematicBody2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Llave/KinematicBody2D"]
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 269.795, 220 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 9.04407, 108.528 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 9.04407, 27.1321 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 174.0
+custom_fonts/font = SubResource( 4 )
+text = "Phew! I grabbed it!"
+align = 1
+valign = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -1.21252, 86.0883 )
+shape = SubResource( 5 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 1030.39, 150.265 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -1.21252, 86.0883 )
+shape = SubResource( 5 )
+
+[node name="TimerChangeScene" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer" to="Area2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Area2D" method="_on_Timer2_timeout"]
+[connection signal="timeout" from="TimerChangeScene" to="." method="_on_TimerChangeScene_timeout"]

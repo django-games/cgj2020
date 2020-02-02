@@ -55,6 +55,17 @@ are on red,
 and I REALLY need to see
 my love!"
 
+[node name="MainContainer5" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.1
+TEXT = "I'm waiting for it...
+That greenlight...
+
+I want it..."
+
 [node name="MainContainer4" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0

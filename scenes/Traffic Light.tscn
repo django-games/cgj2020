@@ -32,7 +32,6 @@ scale = Vector2( 4.27037, 4.27037 )
 texture = ExtResource( 4 )
 
 [node name="LightRed" type="Light2D" parent="TrafficLight1"]
-editor/display_folded = true
 position = Vector2( 0.410004, 0.299927 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
@@ -45,7 +44,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 
 [node name="LightYellow" type="Light2D" parent="TrafficLight1"]
-editor/display_folded = true
 visible = false
 position = Vector2( -0.532715, 144.039 )
 scale = Vector2( 0.5, 0.5 )
@@ -58,7 +56,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight1"]
-editor/display_folded = true
 visible = false
 position = Vector2( -1.32684, 279.682 )
 scale = Vector2( 0.5, 0.5 )
@@ -90,7 +87,6 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="TrafficLight2" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 332.909, 184.178 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
@@ -98,14 +94,12 @@ __meta__ = {
 "_edit_group_": true
 }
 
-
 [node name="TrafficLight" type="Sprite" parent="TrafficLight2"]
 position = Vector2( 0, 147.134 )
 scale = Vector2( 4.27037, 4.27037 )
 texture = ExtResource( 4 )
 
 [node name="LightRed" type="Light2D" parent="TrafficLight2"]
-editor/display_folded = true
 position = Vector2( 0.410004, 0.299927 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
@@ -118,7 +112,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 
 [node name="LightYellow" type="Light2D" parent="TrafficLight2"]
-editor/display_folded = true
 visible = false
 position = Vector2( -0.532715, 144.039 )
 scale = Vector2( 0.5, 0.5 )
@@ -134,7 +127,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight2"]
-editor/display_folded = true
 visible = false
 position = Vector2( -1.32684, 279.682 )
 scale = Vector2( 0.5, 0.5 )
@@ -169,7 +161,6 @@ enabled_focus_mode = 0
 flat = true
 
 [node name="TrafficLight3" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 584.205, 183.965 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
@@ -183,7 +174,6 @@ scale = Vector2( 4.27037, 4.27037 )
 texture = ExtResource( 4 )
 
 [node name="LightRed" type="Light2D" parent="TrafficLight3"]
-editor/display_folded = true
 position = Vector2( 0.410004, 0.299927 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
@@ -196,7 +186,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 
 [node name="LightYellow" type="Light2D" parent="TrafficLight3"]
-editor/display_folded = true
 visible = false
 position = Vector2( -0.532715, 144.039 )
 scale = Vector2( 0.5, 0.5 )
@@ -212,7 +201,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight3"]
-editor/display_folded = true
 visible = false
 position = Vector2( -1.32684, 279.682 )
 scale = Vector2( 0.5, 0.5 )
@@ -245,8 +233,8 @@ toggle_mode = true
 pressed = true
 enabled_focus_mode = 0
 flat = true
+
 [node name="TrafficLight4" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 825.063, 185.723 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
@@ -260,7 +248,6 @@ scale = Vector2( 4.27037, 4.27037 )
 texture = ExtResource( 4 )
 
 [node name="LightRed" type="Light2D" parent="TrafficLight4"]
-editor/display_folded = true
 position = Vector2( 0.410004, 0.299927 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
@@ -273,7 +260,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 
 [node name="LightYellow" type="Light2D" parent="TrafficLight4"]
-editor/display_folded = true
 visible = false
 position = Vector2( -0.532715, 144.039 )
 scale = Vector2( 0.5, 0.5 )
@@ -289,7 +275,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 
 [node name="LightGreen" type="Light2D" parent="TrafficLight4"]
-editor/display_folded = true
 visible = false
 position = Vector2( -1.32684, 279.682 )
 scale = Vector2( 0.5, 0.5 )
@@ -322,7 +307,6 @@ toggle_mode = true
 pressed = true
 enabled_focus_mode = 0
 flat = true
-
 [connection signal="toggled" from="TrafficLight1/Button" to="TrafficLight1/LightYellow" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight2/Button" to="TrafficLight2/LightYellow" method="_on_Button_toggled"]
 [connection signal="toggled" from="TrafficLight3/Button" to="TrafficLight3/LightYellow" method="_on_Button_toggled"]

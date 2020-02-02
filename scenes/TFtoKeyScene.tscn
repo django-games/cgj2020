@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/TFtoKeyScene.gd" type="Script" id=1]
+[ext_resource path="res://templates/BaseTextScene.tscn" type="PackedScene" id=2]
+
+[node name="TFToKeyScene" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text1" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "Okay, I'm finally home
+and my love is waiting
+for me
+"
+
+[node name="Text2" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "...UGH!"
+
+[node name="Text3" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "I just dropped the key to my house"
+
+[node name="Text4" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "..."
+
+[node name="Text5" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "Why can't I REPAIR this?
+
+I can't seem
+to reach it
+with my powers"
+
+[node name="Text6" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "I'll have to do it old school..."
