@@ -60,7 +60,14 @@ func _on_Valerie_area_entered(area):
 
 func _on_Andres_area_entered(area):
 	if area.get_name() == "Radio":
-		$Andy/Texto/Label.text = "YAS, THAT'S MY JAM! TY <3'"
+		$Andy/Texto/Label.text = "YAS, THAT'S MY JAM! TY <3"
 		amount_ready += 1
 		$Radio.hide()
 		print("Andrés con radio")
+
+func _on_Gustavo_area_entered(area):
+	if area.get_name() == "Libro":
+		$Gus/Texto/Label.text = "YOU ROCK, THANKS!"
+		amount_ready += 1
+		$Libro.hide()
+		print("Gus con libro")

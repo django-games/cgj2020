@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scripts/Coffee/Coffee.gd" type="Script" id=1]
 [ext_resource path="res://assets/Agua.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/DragAndDroppable.gd" type="Script" id=7]
 [ext_resource path="res://assets/Pizza.png" type="Texture" id=8]
 [ext_resource path="res://assets/Radio.png" type="Texture" id=9]
+[ext_resource path="res://assets/Libro.png" type="Texture" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Agua.png 0"
@@ -46,6 +47,9 @@ radius = 36.4888
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 59.5529, 24.9655 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 54.0695, 41.414 )
 
 [node name="Coffee" type="Node2D"]
 script = ExtResource( 1 )
@@ -232,8 +236,20 @@ texture = ExtResource( 9 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Radio"]
 position = Vector2( -6.05017, 9.95782 )
 shape = SubResource( 8 )
+
+[node name="Libro" type="Area2D" parent="."]
+position = Vector2( 640.466, 533.649 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Libro"]
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Libro"]
+position = Vector2( -0.567199, 0.819453 )
+shape = SubResource( 9 )
 [connection signal="area_entered" from="Val/Valerie" to="." method="_on_Valerie_area_entered"]
 [connection signal="input_event" from="Val/Valerie" to="." method="_on_Valerie_input_event"]
+[connection signal="area_entered" from="Gus/Gustavo" to="." method="_on_Gustavo_area_entered"]
 [connection signal="input_event" from="Gus/Gustavo" to="." method="_on_Gustavo_input_event"]
 [connection signal="area_entered" from="Dave/David" to="." method="_on_David_area_entered"]
 [connection signal="input_event" from="Dave/David" to="." method="_on_David_input_event"]
