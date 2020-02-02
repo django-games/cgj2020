@@ -6,11 +6,11 @@
 [ext_resource path="res://scenes/BadThoughts/Brain.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=5]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=1]
 size = 64
 font_data = ExtResource( 5 )
 
-[sub_resource type="Curve2D" id=6]
+[sub_resource type="Curve2D" id=2]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -1.75095, -0.697968, 0, 0, 0, 0, 1.67383, 598.64 )
 }
@@ -42,11 +42,11 @@ anchor_right = 0.5
 margin_left = -22.5
 margin_right = 22.5
 margin_bottom = 78.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "0"
 
 [node name="MobPath" type="Path2D" parent="."]
-curve = SubResource( 6 )
+curve = SubResource( 2 )
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 position = Vector2( -1.75095, -0.697968 )
