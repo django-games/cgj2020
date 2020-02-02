@@ -20,12 +20,15 @@ func _on_Timer_timeout():
 func _on_Button_pressed():
 	get_node("Camera2D/Button").hide()
 	get_node("Camera2D/Label").hide()
-	
-	get_tree().reload_current_scene()
+	return get_tree().reload_current_scene()
 
 
-func _on_Final_body_entered(body):
+func _on_Final_body_entered(_body):
 	print("Ganaste")
 	var label = get_node("Camera2D/Label")
-	label.text = "Ganaste loco"
+	label.text = "You made it through the bridge!"
 	label.show()
+	$TimerFinal.start()
+
+func _on_TimerFinal_timeout():
+	return get_tree().change_scene("res://scenes/CarRaceToBadThoughtsScene.tscn")

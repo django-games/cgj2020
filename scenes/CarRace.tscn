@@ -812,6 +812,10 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Final"]
 shape = SubResource( 5 )
+
+[node name="TimerFinal" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
 [connection signal="body_entered" from="Hueco/Area2D" to="Hueco/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco2/Area2D" to="Hueco2/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Hueco3/Area2D" to="Hueco3/Area2D" method="_on_Area2D_body_entered"]
@@ -858,3 +862,4 @@ shape = SubResource( 5 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Camera2D/Button" to="." method="_on_Button_pressed"]
 [connection signal="body_entered" from="Final" to="." method="_on_Final_body_entered"]
+[connection signal="timeout" from="TimerFinal" to="." method="_on_TimerFinal_timeout"]
