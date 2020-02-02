@@ -107,7 +107,7 @@
 radius = 26.7232
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 42.6763, 19.3822 )
+extents = Vector2( 36.896, 16.2532 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 1447.5, 47.2032 )
@@ -806,9 +806,6 @@ text = "Click here to start again"
 
 [node name="Final" type="Area2D" parent="."]
 position = Vector2( 3101.27, 302.024 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Final"]
 shape = SubResource( 5 )

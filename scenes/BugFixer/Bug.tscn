@@ -1,36 +1,38 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/Semaforo.png" type="Texture" id=1]
+[ext_resource path="res://assets/Mariquita.png" type="Texture" id=1]
 [ext_resource path="res://scenes/BugFixer/Bug.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 35.5565, 63.0859 )
+extents = Vector2( 38.3588, 39.0432 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 36.3872, 60.9024 )
+extents = Vector2( 40.846, 38.6823 )
 
 [node name="Bug" type="RigidBody2D"]
-position = Vector2( 2.31644, 1.85316 )
+position = Vector2( -35.9651, -68.1939 )
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 30.823, 61.6461 )
+position = Vector2( 32.452, 82.0086 )
+rotation = 3.14159
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( 32.8341, 65.1561 )
-scale = Vector2( 3.30513, 6.4485 )
+position = Vector2( 32.4268, 69.6359 )
+scale = Vector2( 3.83456, 3.88282 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 33.8201, 64.3972 )
+position = Vector2( 32.1911, 70.0987 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 32.9618, 63.2218 )
+position = Vector2( 32.1473, 70.5523 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="." to="." method="has_been_Shot"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="screen_exited"]
