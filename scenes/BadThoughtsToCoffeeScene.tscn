@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/BadThoughtsToCoffeeScene.gd" type="Script" id=1]
+[ext_resource path="res://templates/BaseTextScene.tscn" type="PackedScene" id=2]
+
+[node name="BadThoughtsToCoffeeScene" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "I...
+
+I have calmed now."
+
+[node name="Text2" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "I can't go on
+living like this.
+
+I have been missing
+what's most important
+in my life."
+
+[node name="Text3" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "I need
+to start
+caring."
+
+[node name="Text4" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "I need to
+tie
+these lose ends."
+
+[node name="Text5" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "Just like I did at work."
+
+[node name="Text6" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "At first,
+it was hard...
+boring...
+
+Only serving
+coffee..."
