@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/Coffee/Coffee.gd" type="Script" id=1]
 [ext_resource path="res://assets/Agua.png" type="Texture" id=2]
@@ -6,8 +6,6 @@
 [ext_resource path="res://assets/BurbujaTexto.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/Cafe.png" type="Texture" id=6]
-[ext_resource path="res://scripts/player.gd" type="Script" id=7]
-[ext_resource path="res://assets/Bad_thought2.png" type="Texture" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Agua.png 0"
@@ -43,10 +41,6 @@ height = 27.9997
 [sub_resource type="CircleShape2D" id=7]
 radius = 36.4888
 
-[sub_resource type="CapsuleShape2D" id=8]
-radius = 58.5658
-height = 2.06112
-
 [node name="Coffee" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -61,7 +55,6 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 3 )
 
 [node name="Val" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Valerie" type="Area2D" parent="Val"]
 position = Vector2( 126, 201 )
@@ -215,24 +208,7 @@ texture = ExtResource( 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cafe"]
 position = Vector2( 1.2605, 6.30249 )
 shape = SubResource( 7 )
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( 454.56, 405.149 )
-gravity_scale = 0.0
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D"]
-texture = ExtResource( 8 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2( 3.67545, -6.61584 )
-shape = SubResource( 8 )
-[connection signal="body_entered" from="Val/Valerie" to="." method="_on_Valerie_body_entered"]
 [connection signal="input_event" from="Val/Valerie" to="." method="_on_Valerie_input_event"]
 [connection signal="input_event" from="Gus/Gustavo" to="." method="_on_Gustavo_input_event"]
 [connection signal="input_event" from="Dave/David" to="." method="_on_David_input_event"]
 [connection signal="input_event" from="Andy/Andres" to="." method="_on_Andres_input_event"]
-[connection signal="input_event" from="Cafe" to="." method="_on_Cafe_input_event"]
