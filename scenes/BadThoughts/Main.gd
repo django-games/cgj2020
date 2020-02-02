@@ -2,7 +2,10 @@ extends Node
 
 # Declare member variables here. Examples:
 export (PackedScene) var Mob
+
 var time_left = 20
+var colors = [Color( 0.18, 0.31, 0.31, 1 ), Color( 0.28, 0.24, 0.55, 1 )]
+
 func _ready():
 	randomize()
 	new_game()
@@ -12,7 +15,7 @@ func game_over():
 	
 	# Puase the game for a break
 	var t = Timer.new()
-	t.set_wait_time(2)
+	t.set_wait_time(2.5)
 	t.set_one_shot(true)
 	add_child(t)
 	t.start()
@@ -41,20 +44,23 @@ func _on_Timer_timeout():
 		finish_game()
 		print("Next scene")
 
-
 func _on_MobTimer_timeout():
 	 # Choose a random location on Path2D.
     $MobPath/MobSpawnLocation.set_offset(randi())
+
+	# Set the mob's direction perpendicular to the path direction.
+    var direction = $MobPath/MobSpawnLocation.rotation - PI/2 + rand_range(-PI / 16, PI / 16)
+	
     # Create a Mob instance and add it to the scene.
     var mob = Mob.instance()
+    mob.set_glow_color(colors[randi()%2])
     add_child(mob)
-    # Set the mob's direction perpendicular to the path direction.
-    var direction = $MobPath/MobSpawnLocation.rotation + PI / 2
+    
     # Set the mob's position to a random location.
     mob.position = $MobPath/MobSpawnLocation.position
     # Add some randomness to the direction.
-    direction += rand_range(-PI / 4, PI / 4)
     mob.rotation = direction
+	
     # Set the velocity (speed & direction).
     mob.linear_velocity = Vector2(rand_range(mob.min_speed, mob.max_speed), 0)
     mob.linear_velocity = mob.linear_velocity.rotated(direction)	
