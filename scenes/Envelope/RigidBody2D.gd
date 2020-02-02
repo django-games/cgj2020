@@ -11,8 +11,8 @@ func _ready():
 func _input(event):
 	if not finished:
 		if event is InputEventMouseMotion and dragging:
-			$LetterNode.position.y = clamp(event.position.y - 500, -250, 0)
-			if $LetterNode.position.y <= -200:
+			position.y = clamp(get_global_mouse_position().y, 0, 400)
+			if position.y <= 200:
 				finished = true
 				get_node("../../Label").text = "..what?!"
 				get_node("../../FinalTimer").start()
