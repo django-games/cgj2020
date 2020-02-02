@@ -11,7 +11,6 @@ func _ready():
 
 func _process(delta):
 	position += SPEED * delta * direction
-	$AnimatedSprite.play("laser")
 
 func screen_exited():
 	queue_free()

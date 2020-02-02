@@ -6,7 +6,10 @@ const BUG = preload("res://scenes/BugFixer/Bug.tscn")
 var remaining_time : int
 
 func _ready():
-	restart()
+	remaining_time = 20
+	update_timer_label(remaining_time)
+	$BugTimer.start()
+	$MatchTimer.start()
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -49,9 +52,4 @@ func on_malla_entered(_area):
 	$RestartTimer.start()
 
 func restart():
-	remaining_time = 20
-	update_timer_label(remaining_time)
-	$BugTimer.start()
-	$MatchTimer.start()
-	$RestartTimer.stop()
-
+	get_tree().reload_current_scene()
