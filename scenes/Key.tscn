@@ -3,12 +3,12 @@
 [ext_resource path="res://scripts/Llave/Key.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bloque2.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Llave/Llave.gd" type="Script" id=3]
-[ext_resource path="res://assets/llave fea.png" type="Texture" id=4]
+[ext_resource path="res://assets/Llave.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Llave/Mani.gd" type="Script" id=5]
-[ext_resource path="res://assets/manomierdi.png" type="Texture" id=6]
+[ext_resource path="res://assets/Mano.png" type="Texture" id=6]
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=7]
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=1]
 0/name = "Bloque2.png 0"
 0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
@@ -20,9 +20,8 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 32.8367
-height = 52.85
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 80, 40 )
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 90.0
@@ -35,12 +34,13 @@ font_data = ExtResource( 7 )
 script = ExtResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
+tile_set = SubResource( 1 )
 format = 1
 tile_data = PoolIntArray( 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
 
 [node name="Llave" type="Node2D" parent="."]
-position = Vector2( 734.544, 447.424 )
+position = Vector2( 736.051, 429.336 )
+rotation = 1.5708
 __meta__ = {
 "_edit_group_": true
 }
@@ -49,10 +49,9 @@ __meta__ = {
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Llave/KinematicBody2D"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Llave/KinematicBody2D"]
-scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -67,7 +66,8 @@ position = Vector2( 9.04407, 108.528 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
-scale = Vector2( 6, 9 )
+position = Vector2( 9.04407, 27.1321 )
+scale = Vector2( 1.3, 1.3 )
 texture = ExtResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
