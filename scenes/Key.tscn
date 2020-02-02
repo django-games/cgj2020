@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/Llave/Key.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bloque2.png" type="Texture" id=2]
@@ -29,6 +29,9 @@ height = 150.0
 
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 12.1285, 676.581 )
 
 [node name="Key" type="Node2D"]
 script = ExtResource( 1 )
@@ -85,6 +88,19 @@ custom_fonts/font = SubResource( 4 )
 text = "Phew! I grabbed it!"
 align = 1
 valign = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -1.21252, 86.0883 )
+shape = SubResource( 5 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 1030.39, 150.265 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -1.21252, 86.0883 )
+shape = SubResource( 5 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="Area2D" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="Area2D" method="_on_Timer2_timeout"]
