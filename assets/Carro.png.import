@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bad_thought.png-ef91b0377bcd5a9726c74e71203f3aec.stex"
+path="res://.import/Carro.png-47de951dc5ab72df22a54d503b57c8fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bad_thought.png"
-dest_files=[ "res://.import/Bad_thought.png-ef91b0377bcd5a9726c74e71203f3aec.stex" ]
+source_file="res://assets/Carro.png"
+dest_files=[ "res://.import/Carro.png-47de951dc5ab72df22a54d503b57c8fa.stex" ]
 
 [params]
 

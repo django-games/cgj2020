@@ -16,4 +16,6 @@ func _process(delta):
 	if is_bridge_complete == 8:
 		if car.position.x <= 1200:
 			car.position.x += SPEED * delta
+		else:
+			get_tree().change_scene("res://scenes/BridgeToTFScene.tscn")
 	

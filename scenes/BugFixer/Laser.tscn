@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/light.png" type="Texture" id=1]
+[ext_resource path="res://assets/spot.png" type="Texture" id=2]
+[ext_resource path="res://scenes/BugFixer/Laser.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "laser",
+"speed": 12.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 16.129
+
+[node name="Laser" type="Area2D"]
+position = Vector2( -1.79376, 3.40463 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.796078, 0.0392157, 0.305882, 1 )
+position = Vector2( 1.85065, -1.85062 )
+scale = Vector2( 0.05, 0.05 )
+frames = SubResource( 1 )
+animation = "laser"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.145991, -0.291992 )
+scale = Vector2( 2.29935, 2.22635 )
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="screen_exited"]

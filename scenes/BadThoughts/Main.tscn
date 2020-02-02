@@ -44,6 +44,9 @@ margin_right = 22.5
 margin_bottom = 78.0
 custom_fonts/font = SubResource( 1 )
 text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MobPath" type="Path2D" parent="."]
 curve = SubResource( 2 )

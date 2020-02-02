@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bad_thought.png-ef91b0377bcd5a9726c74e71203f3aec.stex"
+path="res://.import/BloqueCuadradoMaderaRoto.png-87b5da3934a513e03bbcf252de3e07b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bad_thought.png"
-dest_files=[ "res://.import/Bad_thought.png-ef91b0377bcd5a9726c74e71203f3aec.stex" ]
+source_file="res://assets/BloqueCuadradoMaderaRoto.png"
+dest_files=[ "res://.import/BloqueCuadradoMaderaRoto.png-87b5da3934a513e03bbcf252de3e07b0.stex" ]
 
 [params]
 

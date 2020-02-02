@@ -26,5 +26,4 @@ func _process(_delta):
 				texts[current_node].IS_ACTIVE = true
 
 func after_last_text():
-	print("AWAITING FOR ACTION")
-
+	return get_tree().change_scene("res://scenes/Traffic Light.tscn")

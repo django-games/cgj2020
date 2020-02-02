@@ -17,7 +17,7 @@ anchor_bottom = 0.0
 margin_right = 1024.0
 margin_bottom = 600.0
 SECONDS_TO_WAIT = 0.2
-TEXT = "Here goes the title"
+TEXT = "LIFE FIX"
 
 [node name="DjangoGames" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
