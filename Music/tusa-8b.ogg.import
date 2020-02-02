@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tusa-8b.ogg-80f0e0be9d6b1e1226275293b3e7f962.oggstr"
+
+[deps]
+
+source_file="res://Music/tusa-8b.ogg"
+dest_files=[ "res://.import/tusa-8b.ogg-80f0e0be9d6b1e1226275293b3e7f962.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
