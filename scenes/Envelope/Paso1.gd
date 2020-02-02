@@ -10,4 +10,5 @@ func _ready():
 func _on_Button_pressed():
 	hide()
 	get_node("../Paso2").show()
+	get_node("../Label").text = "Now I have to pull the letter out"
 	print("hide")

@@ -14,10 +14,12 @@ func _input(event):
 			$LetterNode.position.y = clamp(event.position.y - 500, -250, 0)
 			if $LetterNode.position.y <= -200:
 				finished = true
+				get_node("../../Label").text = "..what?!"
+				get_node("../../FinalTimer").start()
 				print("Siguiente escena")
 		elif event is InputEventMouseButton and event.button_index == BUTTON_LEFT and dragging and !event.pressed:
 			dragging = false
 
-func _on_RigidBody2D_input_event(viewport, event, shape_idx):
+func _on_RigidBody2D_input_event(_viewport, event, _shape_idx):
 	if not finished and event is InputEventMouseButton and event.button_index == BUTTON_LEFT and !dragging and event.pressed:
 		dragging = true
