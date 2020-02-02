@@ -10,7 +10,8 @@ extents = Vector2( 38.3588, 39.0432 )
 extents = Vector2( 40.846, 38.6823 )
 
 [node name="Bug" type="RigidBody2D"]
-position = Vector2( -35.9651, -68.1939 )
+position = Vector2( 30.8459, 68.354 )
+rotation = 3.14159
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )

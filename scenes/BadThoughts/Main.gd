@@ -43,7 +43,7 @@ func _on_Timer_timeout():
 	update_timer_label(time_left)
 	if time_left <= 0:
 		finish_game()
-		get_tree().change_scene("res://scenes/BadThoughtsToCoffee.tscn")
+		get_tree().change_scene("res://scenes/BadThoughtsToCoffeeScene.tscn")
 
 func _on_MobTimer_timeout():
 	 # Choose a random location on Path2D.
