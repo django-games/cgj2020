@@ -4,12 +4,15 @@ var val_d = false
 var gus_d = false
 var david_d = false
 var andres_d = false
+var play_tusa = false
 
 var amount_ready = 0
 
 func _process(_delta):
 	if amount_ready == 4:
 		print("NEXT SCENE")
+	if play_tusa and not $Tusa.playing:
+		MusicPlayer.stream_paused = false
 
 func _on_Valerie_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
@@ -64,6 +67,10 @@ func _on_Andres_area_entered(area):
 		amount_ready += 1
 		$Radio.hide()
 		print("Andrés con radio")
+		play_tusa = true
+		MusicPlayer.stream_paused = true
+		$Tusa.stream.loop = false
+		$Tusa.play()
 
 func _on_Gustavo_area_entered(area):
 	if area.get_name() == "Libro":
