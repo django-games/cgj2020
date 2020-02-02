@@ -16,9 +16,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Life Fix"
+config/description="The FIXER can repair anything he wants... but his life! Help him solve puzzles to regain his powers and realize what's the most important thing to take care of."
 run/main_scene="res://scenes/MenuScene.tscn"
 config/icon="res://icon.png"
-config/description="The FIXER can repair anything he wants... but his life! Help him solve puzzles to regain his powers and realize what's the most important thing to take care of."
 
 [autoload]
 
