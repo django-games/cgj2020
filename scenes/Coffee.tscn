@@ -1,0 +1,257 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://scripts/Coffee/Coffee.gd" type="Script" id=1]
+[ext_resource path="res://assets/Agua.png" type="Texture" id=2]
+[ext_resource path="res://assets/CGJ.png" type="Texture" id=3]
+[ext_resource path="res://assets/BurbujaTexto.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/Cafe.png" type="Texture" id=6]
+[ext_resource path="res://scenes/DragAndDroppable.gd" type="Script" id=7]
+[ext_resource path="res://assets/Pizza.png" type="Texture" id=8]
+[ext_resource path="res://assets/Radio.png" type="Texture" id=9]
+[ext_resource path="res://assets/Libro.png" type="Texture" id=10]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Agua.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 39.0002
+height = 35.9997
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 39.0002
+height = 19.9996
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 32.0001
+height = 19.9996
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 34.0001
+height = 27.9997
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 36.4888
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 59.5529, 24.9655 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 54.0695, 41.414 )
+
+[node name="Coffee" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 507.22, 128.878 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="Val" type="Node2D" parent="."]
+
+[node name="Valerie" type="Area2D" parent="Val"]
+position = Vector2( 126, 201 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Val/Valerie"]
+shape = SubResource( 2 )
+
+[node name="Texto" type="Node2D" parent="Val"]
+visible = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Val/Texto"]
+position = Vector2( 201.5, 77.5001 )
+scale = Vector2( 1.095, 0.695 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Val/Texto"]
+margin_left = 121.0
+margin_top = 24.0
+margin_right = 290.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Traeme PIZZA!!!"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Gus" type="Node2D" parent="."]
+
+[node name="Gustavo" type="Area2D" parent="Gus"]
+position = Vector2( 301, 121 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gus/Gustavo"]
+shape = SubResource( 4 )
+
+[node name="Texto" type="Node2D" parent="Gus"]
+visible = false
+position = Vector2( 205.77, -13.5375 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Gus/Texto"]
+position = Vector2( 201.5, 77.5001 )
+scale = Vector2( 1.095, 0.695 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Gus/Texto"]
+margin_left = 121.0
+margin_top = 24.0
+margin_right = 290.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Necesito leer la primera edicion de Dragon ball "
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Dave" type="Node2D" parent="."]
+
+[node name="David" type="Area2D" parent="Dave"]
+position = Vector2( 590, 111 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dave/David"]
+shape = SubResource( 5 )
+
+[node name="Texto" type="Node2D" parent="Dave"]
+visible = false
+position = Vector2( 175.988, 1.80501 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Dave/Texto"]
+position = Vector2( 224.965, 68.4751 )
+scale = Vector2( 1.83505, 0.78525 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="Label" type="Label" parent="Dave/Texto"]
+margin_left = 87.0
+margin_top = 1.0
+margin_right = 359.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Quiero un cafe, doble de azucar, con crema, en taza de porcelana de dinastia china, a temperatura de 79 grados, ni mas ni menos"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Andy" type="Node2D" parent="."]
+
+[node name="Andres" type="Area2D" parent="Andy"]
+position = Vector2( 787.001, 135 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Andy/Andres"]
+shape = SubResource( 6 )
+
+[node name="Texto" type="Node2D" parent="Andy"]
+visible = false
+position = Vector2( 711.171, -2.7075 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Andy/Texto"]
+position = Vector2( 201.5, 77.5001 )
+scale = Vector2( 1.095, 0.695 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Andy/Texto"]
+margin_left = 121.0
+margin_top = 24.0
+margin_right = 290.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PONGAN TUSAAAA"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Cafe" type="Area2D" parent="."]
+position = Vector2( 159.79, 529.994 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Cafe"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cafe"]
+position = Vector2( 1.2605, 6.30249 )
+shape = SubResource( 7 )
+
+[node name="Pizza" type="Area2D" parent="."]
+position = Vector2( 826.888, 531.822 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Pizza"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza"]
+position = Vector2( 1.2605, 6.30249 )
+shape = SubResource( 7 )
+
+[node name="Radio" type="Area2D" parent="."]
+position = Vector2( 329.763, 529.994 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Radio"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radio"]
+position = Vector2( -6.05017, 9.95782 )
+shape = SubResource( 8 )
+
+[node name="Libro" type="Area2D" parent="."]
+position = Vector2( 640.466, 533.649 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Libro"]
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Libro"]
+position = Vector2( -0.567199, 0.819453 )
+shape = SubResource( 9 )
+[connection signal="area_entered" from="Val/Valerie" to="." method="_on_Valerie_area_entered"]
+[connection signal="input_event" from="Val/Valerie" to="." method="_on_Valerie_input_event"]
+[connection signal="area_entered" from="Gus/Gustavo" to="." method="_on_Gustavo_area_entered"]
+[connection signal="input_event" from="Gus/Gustavo" to="." method="_on_Gustavo_input_event"]
+[connection signal="area_entered" from="Dave/David" to="." method="_on_David_area_entered"]
+[connection signal="input_event" from="Dave/David" to="." method="_on_David_input_event"]
+[connection signal="area_entered" from="Andy/Andres" to="." method="_on_Andres_area_entered"]
+[connection signal="input_event" from="Andy/Andres" to="." method="_on_Andres_input_event"]
