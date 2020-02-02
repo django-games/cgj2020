@@ -10,7 +10,7 @@ var amount_ready = 0
 
 func _process(_delta):
 	if amount_ready == 4:
-		print("NEXT SCENE")
+		return get_tree().change_scene("res://scenes/CoffeeToBugFixerScene.tscn")
 	if play_tusa and not $Tusa.playing:
 		MusicPlayer.stream_paused = false
 

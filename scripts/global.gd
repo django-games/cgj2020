@@ -41,3 +41,6 @@ func _input(_ev):
 	elif Input.is_key_pressed(KEY_7):
 		print("Triggering: level 7")
 		return get_tree().change_scene("res://scenes/Coffee.tscn")
+	elif Input.is_key_pressed(KEY_8):
+		print("Triggering: level 8")
+		return get_tree().change_scene("res://scenes/BugFixer/BugFixer.tscn")
