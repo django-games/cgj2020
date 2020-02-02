@@ -9,7 +9,7 @@ func _ready():
 
 func _process(delta):
 	elapsed += delta
-	if buttonTurnedOn == "green" and elapsed >= 1.5 and get_node("/root/TrafficLight").total_green < 4:
+	if buttonTurnedOn == "green" and elapsed >= 1.65 and get_node("/root/TrafficLight").total_green < 4:
 		get_node("../LightGreen").hide()
 		get_node("/root/TrafficLight").total_green -= 1
 		get_node("../Button").set_pressed(true)
@@ -34,8 +34,7 @@ func _on_Button_toggled(toggled):
 	else:
 		get_node("/root/TrafficLight").total_green += 1
 		if	get_node("/root/TrafficLight").total_green == 4:
-			print("Siguiente escena")
-			
+			return get_tree().change_scene("res://scenes/TFtoKeyScene.tscn")
 		hide()
 		get_node("../LightRed").hide()
 		get_node("../LightGreen").show()

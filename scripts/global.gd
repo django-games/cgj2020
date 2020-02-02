@@ -20,4 +20,5 @@ func _input(_ev):
 		print("Triggering: level 2")
 		return get_tree().change_scene("res://scenes/Traffic Light.tscn")
 	elif Input.is_key_pressed(KEY_3):
+		print("Triggering: level 3")
 		return get_tree().change_scene("res://scenes/Key.tscn")

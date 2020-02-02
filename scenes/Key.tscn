@@ -82,7 +82,7 @@ visible = false
 margin_right = 1024.0
 margin_bottom = 174.0
 custom_fonts/font = SubResource( 4 )
-text = "Que depinga estos poderes mios"
+text = "Phew! I grabbed it!"
 align = 1
 valign = 1
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

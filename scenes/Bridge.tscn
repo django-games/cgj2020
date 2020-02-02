@@ -226,7 +226,7 @@ visible = false
 margin_right = 1024.0
 margin_bottom = 139.0
 custom_fonts/font = SubResource( 3 )
-text = "Has ganado papaa!"
+text = "Bridge repaired!"
 align = 1
 valign = 1
 [connection signal="input_event" from="BrokenWood/Area2D" to="BrokenWood/Area2D" method="_on_Area2D_input_event"]
