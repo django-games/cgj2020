@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/BugFixer/BugGun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/bg_gray.png" type="Texture" id=2]
+[ext_resource path="res://scenes/BugFixer/BugFixer.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 54
+font_data = SubResource( 1 )
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1027.73, 3.71793, 0, 0, 0, 0, 3.09357, 1.20039, 0, 0, 0, 0, 516.784, 14.2962, 0, 0, 0, 0, 518.835, -0.0576019 )
+}
+
+[node name="BugFixer" type="Node"]
+script = ExtResource( 3 )
+
+[node name="BugTimer" type="Timer" parent="."]
+wait_time = 0.6
+autostart = true
+
+[node name="MatchTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 501.73, 299.668 )
+scale = Vector2( 8.83954, 5.68232 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Gun" parent="." instance=ExtResource( 1 )]
+position = Vector2( 497.932, 564.414 )
+scale = Vector2( 2, 2 )
+
+[node name="TimeLeft" type="Label" parent="."]
+margin_left = -0.00012207
+margin_top = -6.10352e-05
+margin_right = 1024.0
+margin_bottom = 65.9999
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource( 3 )
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2( 1027.73, 3.71793 )
+rotation = -3.13914
+
+[node name="Malla" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Malla"]
+polygon = PoolVector2Array( -3.91959, 596.774, 1024.24, 601.534, 1025.83, 587.254, 553.002, 588.841, 553.002, 526.961, 460.975, 525.374, 460.975, 584.081, 2.42711, 580.908 )
+
+[node name="RestartTimer" type="Timer" parent="."]
+wait_time = 2.5
+[connection signal="timeout" from="BugTimer" to="." method="bug_spawn"]
+[connection signal="timeout" from="MatchTimer" to="." method="on_match_timeout"]
+[connection signal="area_entered" from="Malla" to="." method="on_malla_entered"]
+[connection signal="timeout" from="RestartTimer" to="." method="restart"]

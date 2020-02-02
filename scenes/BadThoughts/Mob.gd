@@ -9,7 +9,7 @@ func _ready():
 	$AnimatedSprite.animation = "left"
 	
 func set_glow_color(color):
-    $Light2D.set_color(color)
+	$Light2D.set_color(color)
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

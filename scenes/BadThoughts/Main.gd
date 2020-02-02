@@ -46,21 +46,21 @@ func _on_Timer_timeout():
 
 func _on_MobTimer_timeout():
 	 # Choose a random location on Path2D.
-    $MobPath/MobSpawnLocation.set_offset(randi())
+	$MobPath/MobSpawnLocation.set_offset(randi())
 
 	# Set the mob's direction perpendicular to the path direction.
-    var direction = $MobPath/MobSpawnLocation.rotation - PI/2 + rand_range(-PI / 16, PI / 16)
+	var direction = $MobPath/MobSpawnLocation.rotation - PI/2 + rand_range(-PI / 16, PI / 16)
 	
-    # Create a Mob instance and add it to the scene.
-    var mob = Mob.instance()
-    mob.set_glow_color(colors[randi()%2])
-    add_child(mob)
-    
-    # Set the mob's position to a random location.
-    mob.position = $MobPath/MobSpawnLocation.position
-    # Add some randomness to the direction.
-    mob.rotation = direction
+	# Create a Mob instance and add it to the scene.
+	var mob = Mob.instance()
+	mob.set_glow_color(colors[randi()%2])
+	add_child(mob)
 	
-    # Set the velocity (speed & direction).
-    mob.linear_velocity = Vector2(rand_range(mob.min_speed, mob.max_speed), 0)
-    mob.linear_velocity = mob.linear_velocity.rotated(direction)	
+	# Set the mob's position to a random location.
+	mob.position = $MobPath/MobSpawnLocation.position
+	# Add some randomness to the direction.
+	mob.rotation = direction
+	
+	# Set the velocity (speed & direction).
+	mob.linear_velocity = Vector2(rand_range(mob.min_speed, mob.max_speed), 0)
+	mob.linear_velocity = mob.linear_velocity.rotated(direction)	
