@@ -1,0 +1,123 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://templates/BaseTextScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/LetterToCarRaceScene.gd" type="Script" id=2]
+
+[node name="LetterToCarRaceScene" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainContainer" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "\"Dear FIXER,
+
+This is my goodbye.\""
+
+[node name="MainContainer2" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "\"You spend so much time
+repairing this, and that,
+you are always late home.\""
+
+[node name="MainContainer3" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "\"Do you ever think of us?\""
+
+[node name="MainContainer4" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "\"I don't know
+what is right or wrong...
+
+But I don't feel like
+I'm important to you\""
+
+[node name="MainContainer5" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "\"So I'm out.
+
+Take care.
+
+- Love\""
+
+[node name="MainContainer6" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.4
+TEXT = "..."
+
+[node name="MainContainer7" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "I can't take this."
+
+[node name="MainContainer8" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "This can't be happening...
+
+My love left me!"
+
+[node name="MainContainer9" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "I am driving
+so far away
+to forget!"
+
+[node name="MainContainer10" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "But wait...
+
+The road is full of holes!
+
+And I...
+I can't repair them..."
+
+[node name="MainContainer11" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+SECONDS_TO_WAIT = 0.2
+TEXT = "My powers are not working!
+
+Watch out for the road!"
