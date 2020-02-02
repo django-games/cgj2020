@@ -4,8 +4,8 @@
 [ext_resource path="res://assets/Brain.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 37.0233
-height = 22.9838
+radius = 31.4379
+height = 5.59702
 
 [node name="Brain" type="Area2D"]
 position = Vector2( 364.286, 270.29 )
@@ -15,7 +15,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.3204, -3.96118 )
+position = Vector2( 0.585289, -9.84192 )
 rotation = 1.5708
 shape = SubResource( 1 )
 __meta__ = {
