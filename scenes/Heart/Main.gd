@@ -31,4 +31,4 @@ func _process(delta):
 		$Piece4.position = p4
 
 	if b1 and b2 and b3 and b4:
-		print("Next scene")
+		return get_tree().change_scene("res://scenes/TheEnd.tscn")
