@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/BugFixer/BugFixer.gd" type="Script" id=1]
 [ext_resource path="res://assets/bg_gray.png" type="Texture" id=2]
@@ -10,11 +10,6 @@ font_path = "res://assets/fonts/Xolonium-Regular.ttf"
 [sub_resource type="DynamicFont" id=2]
 size = 54
 font_data = SubResource( 1 )
-
-[sub_resource type="Curve2D" id=3]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 1027.73, 3.71793, 0, 0, 0, 0, 3.09357, 1.20039, 0, 0, 0, 0, 516.784, 14.2962, 0, 0, 0, 0, 518.835, -0.0576019 )
-}
 
 [sub_resource type="Curve2D" id=4]
 _data = {
@@ -57,14 +52,6 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-
-[node name="MobPath1" type="Path2D" parent="."]
-visible = false
-curve = SubResource( 3 )
-
-[node name="MobSpawnLocation1" type="PathFollow2D" parent="MobPath1"]
-position = Vector2( 1027.73, 3.71793 )
-rotation = -3.13914
 
 [node name="Malla" type="Area2D" parent="."]
 
