@@ -27,13 +27,14 @@ func _process(delta):
 func _on_Button_toggled(toggled):
 	var CANT = get_node("/root/TrafficLight").total_green
 	if toggled:
-		if CANT < 4:
+		if CANT < 4 and buttonTurnedOn == "green":
 			print("decrement")
 			get_node("/root/TrafficLight").total_green -= 1
 			show()
 			get_node("../LightRed").hide()
 			get_node("../LightGreen").hide()
 			elapsed = 0
+			buttonTurnedOn = "yellow"
 	else:
 		print("increment")
 		get_node("/root/TrafficLight").total_green += 1
