@@ -4,14 +4,13 @@
 [ext_resource path="res://scenes/BugFixer/BugGun.gd" type="Script" id=2]
 
 [node name="Gun" type="Node2D"]
-position = Vector2( -1.79745, 6.37033 )
-rotation = 3.14159
+position = Vector2( -2.61196, 19.4025 )
 __meta__ = {
-"_edit_group_": true
+"_edit_horizontal_guides_": [ -30.0 ]
 }
 
 [node name="BugGun" type="Sprite" parent="."]
-position = Vector2( 4.71158, -0.0292444 )
+position = Vector2( -0.175474, 4.0433 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 174, 147, 1, 1 )

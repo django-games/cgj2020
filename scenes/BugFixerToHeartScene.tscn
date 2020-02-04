@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://templates/BaseTextScene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/BugFixerToHeartScene.gd" type="Script" id=2]
+[ext_resource path="res://scenes/BugFixerToHeartScene.gd" type="Script" id=1]
+[ext_resource path="res://templates/BaseTextScene.tscn" type="PackedScene" id=2]
 
 [node name="BugFixerToHeartScene" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Text" parent="." instance=ExtResource( 1 )]
+[node name="Text" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1024.0
@@ -19,7 +19,7 @@ margin_bottom = 600.0
 SECONDS_TO_WAIT = 0.18
 TEXT = "Ahh, that was fun..."
 
-[node name="Text2" parent="." instance=ExtResource( 1 )]
+[node name="Text2" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1024.0
@@ -27,7 +27,7 @@ margin_bottom = 600.0
 SECONDS_TO_WAIT = 0.18
 TEXT = "And I know it's just the beggining."
 
-[node name="Text3" parent="." instance=ExtResource( 1 )]
+[node name="Text3" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1024.0
@@ -37,7 +37,7 @@ TEXT = "Through hard work,
 I am working
 to be a game designer"
 
-[node name="Text4" parent="." instance=ExtResource( 1 )]
+[node name="Text4" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1024.0
@@ -49,7 +49,7 @@ neglected the love of my life,
 because the use
 of my powers..."
 
-[node name="Text5" parent="." instance=ExtResource( 1 )]
+[node name="Text5" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1024.0
@@ -59,7 +59,7 @@ TEXT = "It's time
 to mend hearts
 and set everything right."
 
-[node name="Text6" parent="." instance=ExtResource( 1 )]
+[node name="Text6" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1024.0
@@ -69,7 +69,7 @@ TEXT = "Will I make it?
 
 Can I do this?"
 
-[node name="Text7" parent="." instance=ExtResource( 1 )]
+[node name="Text7" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1024.0

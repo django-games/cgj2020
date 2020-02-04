@@ -46,7 +46,6 @@ func on_malla_entered(_area):
 	if _area.get_filename() == LASER.get_path():
 		# Ignoring laserbeams
 		return
-	print("ACABO DE ENTRAR CON", _area, " DE TIPO ")
 	$MatchTimer.stop()
 	$BugTimer.stop()
 	update_timer_label("LOST")

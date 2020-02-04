@@ -8,6 +8,9 @@ func _ready():
 	self.position = original_position
 	direction = get_global_mouse_position() - original_position
 	direction = direction.normalized()
+	
+	var mouse_position = get_local_mouse_position()
+	rotation += PI/2 + mouse_position.angle()
 
 func _process(delta):
 	position += SPEED * delta * direction
